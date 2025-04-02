@@ -137,7 +137,7 @@ class _InventoryPageState extends State<InventoryPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Inventory Management System'),
+        title: const Text('Inventory Management System',style: TextStyle(fontSize: 15)),
         actions: [
           ElevatedButton(onPressed: 
             () {
@@ -164,7 +164,7 @@ class _InventoryPageState extends State<InventoryPage> {
                   margin: const EdgeInsets.all(10),
                   child: ListTile(
                     title: Text(documentSnapshot['name'], style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),),
-                    subtitle: Text("Price: " + documentSnapshot['price'].toString() + "\nQuantity: " + documentSnapshot['quantity'].toString(), style: TextStyle(fontSize: 10),),
+                    subtitle: Text("Price: " + documentSnapshot['price'].toString() + "\nQuantity: " + documentSnapshot['quantity'].toString(), style: TextStyle(fontSize: 15),),
                     trailing: SizedBox(
                       width: 100,
                       child: Row(
@@ -327,7 +327,7 @@ class _EmployeePageState extends State<EmployeePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Employee Management System', style: TextStyle(fontSize: 17),),
+        title: const Text('Employee Management System', style: TextStyle(fontSize: 15),),
                 actions: [
           ElevatedButton(onPressed: 
             () {
@@ -354,7 +354,7 @@ class _EmployeePageState extends State<EmployeePage> {
                   margin: const EdgeInsets.all(10),
                   child: ListTile(
                     title: Text(documentSnapshot['fName'] + " " + documentSnapshot['lName'] , style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),),
-                    subtitle: Text("Date of Birth: " + documentSnapshot['dob'] + "\nSalary: " + documentSnapshot['salary'].toString(), style: TextStyle(fontSize: 10),),
+                    subtitle: Text("Date of Birth: " + documentSnapshot['dob'] + "\nSalary: " + documentSnapshot['salary'].toString(), style: TextStyle(fontSize: 15),),
                     trailing: SizedBox(
                       width: 100,
                       child: Row(
@@ -389,7 +389,7 @@ class _EmployeePageState extends State<EmployeePage> {
       // Add new product
       floatingActionButton: FloatingActionButton(
         onPressed: () => _createOrUpdate(),
-        child: Text("Add\nItem", textAlign: TextAlign.center,),
+        child: Text("Add", textAlign: TextAlign.center,),
       ),
     );
   }
